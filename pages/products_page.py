@@ -57,6 +57,7 @@ class ProductsPage(BasePage):
 
     def add_product_by_index(self, index):
         self.hover_by_index(self.__PRODUCT_CARD, index)
+        self.wait_time(2)
         self.click_by_index_force(self.__ADD_TO_CART_BTN, index)
         self.wait_time_visible(self.__CONTINUE_SHOPPING)
 
